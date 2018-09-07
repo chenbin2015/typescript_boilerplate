@@ -1,19 +1,36 @@
-import * as React from 'react';
-import * as styles from './App.scss';
+import * as React from 'react'
+import { Router, Route, Link } from 'react-router-dom'
+import * as styles from './App.scss'
+import { createLoadableComponent } from './common/createLoadableComponent'
+import routes from './routes'
 
-import logo from './logo.svg';
+import { createBrowserHistory } from 'history'
+
+const history = createBrowserHistory()
 
 class App extends React.Component {
   public render() {
     return (
       <div className={styles.App}>
-        <header className="App-header">
-          <img src={logo} className={styles.AppLogo} alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
+        这是首页
+        <Router history={history}>
+          <div>
+
+            <Link to='/main'>go main</Link>
+            <Link to='/about'>go about</Link>
+            {
+              routes.map((route: any, index) => {
+                return <Route
+                  key={index}
+                  exact={true}
+                  path={route.path}
+                  component={createLoadableComponent(route.component, () => null)}
+                />
+              })
+            }
+          </div>
+
+        </Router>
       </div>
     );
   }
