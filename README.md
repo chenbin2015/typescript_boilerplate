@@ -1,8 +1,8 @@
-###1.初始化typescript环境
+### 1.初始化typescript环境
 ```
 create-react-app demo --scripts-version=react-scripts-ts
 ```
-###2.添加scss的支持
+### 2.添加scss的支持
 ```
 npm run eject
 yarn add sass-loader node-sass --dev
@@ -70,7 +70,7 @@ declare module '*.scss';
 ```
 以上，scss配置成功
 
-###3.添加router
+### 3.添加router
 ```
 yarn add react-router-dom 
 yarn add @types/react-router-dom --dev
@@ -98,7 +98,7 @@ class App extends React.Component {
 }
 ```
 这个时候，已经基本达到我们的要求了，但是，还得继续
-###4. code split
+### 4. code split
 代码分割可以说可做可不做，一般做的话，是拆分js，减少首屏加载的时间，我们一般要确保首屏的网络请求量减少到尽量少，所以还是推荐做拆分，这里我们用到了react-loadable,都是语法糖，直接用即可，我们创建一个导入组件的新方法，如下
 ```
 import * as React from 'react'
@@ -131,7 +131,7 @@ export default routes
 以上，即可完成代码分离，我们来看看效果
 ![image.png](https://upload-images.jianshu.io/upload_images/5087999-7d94e2d76c6c9597.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-###5.添加redux
+### 5.添加redux
 + 5.1.安装所需依赖
 ```
 yarn add  redux react-redux redux-thunk
@@ -320,7 +320,7 @@ ReactDOM.render(
 ![image.png](https://upload-images.jianshu.io/upload_images/5087999-07703fc5a1f24361.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-###6.权限验证
+### 6.权限验证
 ### 参考文献
 [声明文件相关](https://stackoverflow.com/questions/40382842/cant-import-css-scss-modules-typescript-says-cannot-find-module/41946697)
 [初始化ts相关](https://levelup.gitconnected.com/typescript-and-react-using-create-react-app-a-step-by-step-guide-to-setting-up-your-first-app-6deda70843a4)
