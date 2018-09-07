@@ -1,4 +1,4 @@
-###1.初始化typescript环境
+### 1.初始化typescript环境
 ```
 create-react-app demo --scripts-version=react-scripts-ts
 ```
