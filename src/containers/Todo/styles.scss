@@ -1,0 +1,15 @@
+.todo {
+  margin: 20px;
+  ul {
+    li {
+      list-style: none;
+      text-align: left;
+    }
+  }
+  input {
+    padding: 3px;
+    border: 1px solid #e6e6e6;
+    border-radius: 2px;
+    outline: none;
+  }
+}

@@ -18,6 +18,7 @@ class App extends React.Component {
 
             <Link to='/main'>go main</Link>
             <Link to='/about'>go about</Link>
+            <Link to='/todo'>go todo</Link>
             {
               routes.map((route: any, index) => {
                 return <Route
